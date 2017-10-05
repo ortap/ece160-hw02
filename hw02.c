@@ -10,8 +10,8 @@ void print_int_ranges() {
   int short_bytes = sizeof(short), int_bytes = sizeof(int), uint_bytes = sizeof(unsigned int), long_bytes = sizeof(long);
 
   long  short_min = -(1<<(short_bytes*8-1)),       short_max = ~short_min;
-  long  int_min   = -(1<<(int_bytes*8-1)), int_max   = ~int_min;
-  unsigned long  uint_min  = 0<<(uint_bytes*8-1),            uint_max  = ~0U;
+  long  int_min   = 1<<(int_bytes*8-1), int_max   = ~int_min;
+  unsigned long  uint_min  = 0,            uint_max  = ~0U;
   long  long_min  = 1;
   long_min = long_min << (long_bytes*8-1);
   long long_max  = ~long_min;
